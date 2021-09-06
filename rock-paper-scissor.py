@@ -3,13 +3,13 @@ import random
 print("Lets play Rock Paper Scissors...Best of three turn wins!\n")
 username = input("Enter your name: \n")
 
-
+#Function to get system(opponent) response
 def system_response():
     system_choices = ["R", "P", "S"]
     system_choice = random.choice(system_choices)
     return system_choice
 
-
+#Function to decide winning choice
 def decision(user_choice, system_choice, username):
     if user_choice == "R" and system_choice == "P":
         return "user"
@@ -32,8 +32,10 @@ def decision(user_choice, system_choice, username):
 
 
 count = 1
+#keeping score 
 user_win = 0
 system_win = 0
+#driver code that starts gameplay
 while count <= 3:
     user_choice = input("Enter your choice: R = Rock P = Paper S = Scissor: \n")
     if user_choice not in ["R", "P", "S"]:
