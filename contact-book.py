@@ -32,7 +32,7 @@ def insert_values(number, fname, lname):
 
 # Function to display values
 def display_values():
-    # SQL command to insert the data in the table
+    # SQL command to fetch data from table
     sql_command = '''SELECT * FROM contacts;'''
     cursor.execute(sql_command)
     records = cursor.fetchall()
